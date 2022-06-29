@@ -1,6 +1,6 @@
 {
-  "vendor": "tfbttg",
-  "name": "facvtexiostore",
+  "vendor": "atmosphere",
+  "name": "fac-hc-store-one",
   "version": "0.0.1",
   "builders": {
     "styles": "2.x",
