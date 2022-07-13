@@ -1,23 +1,42 @@
 {
   "store.product": {
     "children": [
+      "condition-layout.product",
       "breadcrumb",
       "flex-layout.row#main"
     ]
+  },
+  "condition-layout.product": {
+    "children": ["condition.product#geladeira"]
+  },
+  "condition.product#geladeira": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productId",
+          "verb": "is",
+          "object": "3"
+        }
+      ]
+    },
+    "children": ["image#geladeira-banner"]
+  },
+  "image#geladeira-banner": {
+    "props": {
+      "src": "https://appliancetheme.vtexassets.com/assets/app/src/retroimage___92a8271aac7c51d2059193bdbe019016.jpg",
+      "width": "100%",
+      "height": "200px",
+      "blockClass": "cover"
+    }
   },
   "flex-layout.row#main": {
     "props": {
       "marginTop": 6
     },
-    "children": [
-      "flex-layout.col#left",
-      "flex-layout.col#right"
-    ]
+    "children": ["flex-layout.col#left", "flex-layout.col#right"]
   },
   "flex-layout.col#left": {
-    "children": [
-      "product-images"
-    ]
+    "children": ["product-images"]
   },
   "flex-layout.col#right": {
     "props": {
@@ -40,9 +59,6 @@
     }
   },
   "flex-layout.row#qty-sku": {
-    "children": [
-      "sku-selector",
-      "product-quantity"
-    ]
+    "children": ["sku-selector", "product-quantity"]
   }
 }
